@@ -2,7 +2,7 @@
 # validateutil.kt
 
 Kotlin library for validation for usoamickt
-s
+
 ## Gradle Setup
 ```gradle
 repositories {
@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.usoamic:validateutilkt:v1.0.0'
+    implementation 'com.github.usoamic:validateutilkt:master-SNAPSHOT'
 }
 ```
 
