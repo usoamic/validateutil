@@ -1,4 +1,4 @@
-[![](https://jitpack.io/v/usoamic/usoamickt.svg)](https://jitpack.io/#usoamic/validateutil)
+[![](https://jitpack.io/v/usoamic/validateutilkt.svg)](https://jitpack.io/#usoamic/validateutil)
 # validateutil.kt
 
 Kotlin library for validation for usoamickt
