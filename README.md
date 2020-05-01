@@ -1,18 +1,8 @@
-[![](https://jitpack.io/v/usoamic/usoamickt.svg)](https://jitpack.io/#usoamic/usoamickt)
-# usoamic.kt
+[![](https://jitpack.io/v/usoamic/usoamickt.svg)](https://jitpack.io/#usoamic/validateutil)
+# validateutil.kt
 
-Kotlin library for interaction with Usoamic contract
-
-## Example For Android
-```
-val usoamic = Usoamic(
-    fileName = "FILE_NAME.json",
-    filePath = applicationContext.applicationInfo.dataDir,
-    networkType = NetworkType.MAINNET,
-    nodeProvider = NodeProvider.MYETHERWALLET
-)
-```
-
+Kotlin library for validation for usoamickt
+s
 ## Gradle Setup
 ```gradle
 repositories {
