@@ -1,6 +1,6 @@
 package io.usoamic.validateutilkt
 
-import io.usoamic.validateutilkt.exception.*
+import io.usoamic.validateutilkt.error.*
 import org.web3j.crypto.MnemonicUtils
 import org.web3j.crypto.WalletUtils
 import java.math.BigDecimal

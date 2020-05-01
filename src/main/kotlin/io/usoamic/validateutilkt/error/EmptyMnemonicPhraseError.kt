@@ -1,3 +1,3 @@
-package io.usoamic.validateutilkt.exception
+package io.usoamic.validateutilkt.error
 
 class EmptyMnemonicPhraseError : ValidateUtilError()

@@ -1,4 +1,4 @@
-package io.usoamic.validateutilkt.exception
+package io.usoamic.validateutilkt.error
 
 import java.lang.Exception
 
