@@ -1,9 +1,7 @@
-package io.usoamic.usoamickt_test
+package io.usoamic.validateutilkt_test
 
-import io.usoamic.`usoamickt-validateutil`.exception.*
 import io.usoamic.validateutilkt.ValidateUtil
-import io.usoamic.usoamickt_test.other.TestConfig
-import io.usoamic.validateutilkt.exception.*
+import io.usoamic.validateutilkt.error.*
 import org.junit.jupiter.api.Test
 
 class ValidateUtilTest {
@@ -15,6 +13,32 @@ class ValidateUtilTest {
             ValidateUtil.validatePassword("")
         } catch (e: Exception) {
             assert(e is EmptyPasswordError)
+        }
+    }
+
+    @Test
+    fun validatePasswordsTest() {
+        ValidateUtil.validatePasswords("1234", "1234")
+
+        try {
+            ValidateUtil.validatePasswords("", "1")
+        }
+        catch (e: Exception) {
+            assert(e is EmptyPasswordError)
+        }
+
+        try {
+            ValidateUtil.validatePasswords("1", "")
+        }
+        catch (e: java.lang.Exception) {
+            assert(e is EmptyConfirmPasswordError)
+        }
+
+        try {
+            ValidateUtil.validatePasswords("1", "2")
+        }
+        catch (e: Exception) {
+            assert(e is PasswordsDoNotMatchError)
         }
     }
 
@@ -84,7 +108,7 @@ class ValidateUtilTest {
 
     @Test
     fun validateAddressTest() {
-        val address = TestConfig.CONTRACT_CREATOR_ADDRESS
+        val address = "0xcabE4d50Fe44adc481FE965ecfc1B0B9a4389640"
         ValidateUtil.validateAddress(address)
 
         try {
