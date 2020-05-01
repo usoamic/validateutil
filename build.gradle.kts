@@ -17,6 +17,7 @@ repositories {
 }
 
 dependencies {
+    compile("org.jetbrains.kotlin", "kotlin-stdlib", "1.3.50")
     compile("org.web3j", "core", "4.3.1")
     testCompile("org.jetbrains.kotlin", "kotlin-test-junit5", "1.3.50")
     testCompile("org.junit.jupiter", "junit-jupiter", "5.5.0")
