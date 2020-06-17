@@ -1,1 +1,1 @@
-rootProject.name = "usoamickt"
+rootProject.name = "validateutilkt"
