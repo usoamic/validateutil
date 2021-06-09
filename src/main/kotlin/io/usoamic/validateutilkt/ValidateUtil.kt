@@ -127,6 +127,14 @@ object ValidateUtil {
     }
 
     @JvmStatic
+    fun validateNoteRefId(id: String) = apply {
+        val intId = id.toBigIntegerOrNull() ?: throw InvalidIdError()
+        if (intId < BigInteger.ONE) {
+            throw InvalidIdError()
+        }
+    }
+
+    @JvmStatic
     fun validateIds(vararg ids: String) = apply {
         for (id in ids) {
             validateId(id)
