@@ -120,24 +120,36 @@ object ValidateUtil {
 
     @JvmStatic
     fun validateId(id: String) = apply {
-        val intId = id.toBigIntegerOrNull() ?: throw InvalidIdError()
-        if (intId < BigInteger.ZERO) {
-            throw InvalidIdError()
-        }
+        validateId(
+            id = id,
+            minId = BigInteger.ZERO
+        )
     }
 
     @JvmStatic
     fun validateNoteRefId(id: String) = apply {
-        val intId = id.toBigIntegerOrNull() ?: throw InvalidIdError()
-        if (intId < BigInteger.ONE) {
-            throw InvalidIdError()
-        }
+        validateId(
+            id = id,
+            minId = BigInteger.ONE
+        )
     }
 
     @JvmStatic
     fun validateIds(vararg ids: String) = apply {
         for (id in ids) {
             validateId(id)
+        }
+    }
+
+    @JvmStatic
+    private fun validateId(id: String, minId: BigInteger? = null, maxId: BigInteger? = null) = apply {
+        val intId = id.toBigIntegerOrNull() ?: throw InvalidIdError()
+
+        if(((minId != null) && (intId < minId)) || ((maxId != null) && (intId > maxId))) {
+            throw InvalidIdError(
+                minId = minId,
+                maxId = maxId
+            )
         }
     }
 
