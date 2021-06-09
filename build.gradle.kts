@@ -3,13 +3,13 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     java
     maven
-    kotlin("jvm") version "1.3.50"
-    kotlin("kapt") version "1.3.50"
+    kotlin("jvm") version "1.5.10"
+    kotlin("kapt") version "1.5.10"
 }
 
 allprojects {
     group = "io.usoamic"
-    version = "1.0.0"
+    version = "1.0.1"
 }
 
 repositories {
@@ -17,9 +17,9 @@ repositories {
 }
 
 dependencies {
-    compile("org.jetbrains.kotlin", "kotlin-stdlib", "1.3.50")
-    compile("org.web3j", "core", "4.3.1")
-    testCompile("org.jetbrains.kotlin", "kotlin-test-junit5", "1.3.50")
+    compile("org.jetbrains.kotlin", "kotlin-stdlib", "1.5.10")
+    compile("org.web3j", "core", "4.6.0")
+    testCompile("org.jetbrains.kotlin", "kotlin-test-junit5", "1.5.10")
     testCompile("org.junit.jupiter", "junit-jupiter", "5.5.0")
 }
 
