@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.usoamic:validateutilkt:v1.0.2'
+    implementation 'com.github.usoamic:validateutilkt:v1.0.1-3'
 }
 ```
 
